@@ -1,0 +1,18 @@
+networks:
+  portfolio:
+    external: false
+
+services:
+  app:
+    build: .
+    networks:
+      - portfolio
+    ports:
+      - "8080:8080"
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./html/:/app/html/
+      - ./css:/app/css/
+      - ./assets/:/app/assets/
+    restart: always

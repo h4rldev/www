@@ -12,7 +12,7 @@ WORKDIR /app/
 RUN chmod +x /app/portfolio-bin
 
 # Expose port 8080
-EXPOSE 8080
+EXPOSE 4441
 
 # Command to run the binary
 CMD ["./portfolio-bin"]

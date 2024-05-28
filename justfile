@@ -20,8 +20,9 @@ default:
 
 # For git purposes, ignore unless you need to update.
 @submod_update:
-  git submodule foreach git pull origin master
+  git submodule foreach git pull origin main
 
+# This too.
 @submod_update_remote:
   just submod_update
   git add .

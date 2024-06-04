@@ -15,5 +15,5 @@ services:
       - ./html/:/app/html/
       - ./css:/app/css/
       - ./assets/:/app/assets/
-        ./backend-config.toml:/app/backend-config.toml
+      - ./backend-config.toml:/app/backend-config.toml
     restart: always

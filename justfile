@@ -1,8 +1,7 @@
 default: 
   just --list
   
-@start:
-  just install
+@start: install
   cd portfolio-bin
   @docker compose up --build -d
 
@@ -23,8 +22,7 @@ default:
   git submodule foreach git pull origin main
 
 # This too.
-@submod_update_remote:
-  just submod_update
+@submod_update_remote: submod_update
   git add .
   git commit . -m "sync(submodules): Sync submodules to latest commit."
   git push

@@ -4,15 +4,15 @@ FROM debian:bookworm-slim
 USER root
 
 # Copy the binary and its dependent folders into the container
-COPY ./portfolio-bin /app/
+COPY ./www-bin /app/
 
 WORKDIR /app/
 
 # Make the binary executable
-RUN chmod +x /app/portfolio-bin
+RUN chmod +x /app/www-bin
 
 # Expose port 8080
 EXPOSE 4441
 
 # Command to run the binary
-CMD ["./portfolio-bin"]
+CMD ["./www-bin"]

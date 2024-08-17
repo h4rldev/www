@@ -1,12 +1,12 @@
 networks:
-  portfolio:
+  www:
     external: false
 
 services:
   app:
     build: .
     networks:
-      - portfolio
+      - www
     ports:
       - "4441:4441"
     volumes:

@@ -11,7 +11,7 @@ default:
   ./just_wrapper.sh www-backend build
   mv www-backend/www-bin ./www-dir/www-bin
 
-  cp www-frontend/backend-config ./www-dir/
+  cp www-frontend/backend-config.toml ./www-dir/
   cp -r www-frontend/assets ./www-dir/
   cp -r www-frontend/html ./www-dir/
   cp -r www-frontend/css ./www-dir/

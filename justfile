@@ -2,19 +2,20 @@ default:
   just --list
   
 @start: install
-  cd portfolio-bin
+  cd www-bin
   @docker compose up --build -d
 
 @install:
-  mkdir portfolio-dir || true
+  mkdir www-dir || true
   chmod +x just_wrapper.sh
-  ./just_wrapper.sh portfolio-backend build
-  mv portfolio-backend/portfolio-backend ./portfolio-dir/portfolio-bin
+  ./just_wrapper.sh www-backend build
+  mv www-backend/www-bin ./www-dir/www-bin
 
-  cp -r portfolio-frontend/assets ./portfolio-dir/
-  cp -r portfolio-frontend/html ./portfolio-dir/
-  cp -r portfolio-frontend/css ./portfolio-dir/
-  cp -r *ocker* ./portfolio-dir/
+  cp www-frontend/backend-config ./www-dir/
+  cp -r www-frontend/assets ./www-dir/
+  cp -r www-frontend/html ./www-dir/
+  cp -r www-frontend/css ./www-dir/
+  cp -r *ocker* ./www-dir/
 
 
 # For git purposes, ignore unless you need to update.

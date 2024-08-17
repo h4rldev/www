@@ -1,8 +1,8 @@
-[submodule "portfolio-backend"]
-	path = portfolio-backend
-	url = https://github.com/h4rldev/portfolio-backend
+[submodule "www-backend"]
+	path = www-backend
+	url = https://github.com/h4rldev/www-backend
 	branch = "main"
-[submodule "portfolio-frontend"]
-	path = portfolio-frontend
-	url = https://github.com/h4rldev/portfolio-frontend
+[submodule "www-frontend"]
+	path = www-frontend
+	url = https://github.com/h4rldev/www-frontend
 	branch = "main"
